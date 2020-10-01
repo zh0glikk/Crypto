@@ -5,7 +5,7 @@
 void filtrateArrayForBigram(char source[], int sourceLength, char target[]) {
 	for (int i = 0, j = 0; i < sourceLength; i++) {
 		char tmp = source[i];
-		if (tmp >= 'à' && tmp <= 'ÿ') {
+		if (tmp >= 'Ð°' && tmp <= 'Ñ') {
 			target[j] = tmp;
 			j += 1;
 		}
