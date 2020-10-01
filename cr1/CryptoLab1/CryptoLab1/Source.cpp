@@ -27,14 +27,13 @@ void filtrate(char array[], int length) {
 	for (int i = 0; i < length; i++) {
 		tmp = array[i];
 
-		if (tmp == '®' || tmp == '∏') {
-			array[i] = 'Â';
-			//    	std::cout << array[i];
+		if (tmp == '√ã' || tmp == '—ë') {
+			array[i] = '–µ';
 		}
-		else if (tmp >= '¿' && tmp <= 'ﬂ') {
+		else if (tmp >= '–ê' && tmp <= '–Ø') {
 			array[i] += delta;
 		}
-		else if (tmp < '‡' || tmp > 'ˇ') {
+		else if (tmp < '–∞' || tmp > '—è') {
 			array[i] = ' ';
 		}
 	}
@@ -95,12 +94,6 @@ int main() {
 
 	printTableToFile(&outBI, bigramFrequencyIntersection, letters);
 	printTableToFile(&outBWI, bigramFrequencyWithoutIntersection, letters);
-	
-	/*
-	std::cout << std::endl;
-	printTable(bigramFrequencyIntersection, letters);
-	std::cout << std::endl;
-	printTable(bigramFrequencyWithoutIntersection, letters);*/
 
 	std::cout << "Bigrams with intersection entrop: " << countEntropForBigram(bigramAmountIntersection, realLength) << std::endl;
 	std::cout << "Bigrams without intersection entrop: " << countEntropForBigram(bigramAmountWithoutIntersection, realLength) << std::endl;
